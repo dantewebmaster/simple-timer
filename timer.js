@@ -10,12 +10,11 @@ function startCountdown(duration) {
     if (duration < 0) {
       clearInterval(window.timerInterval);
       timerElement.innerHTML = "Time's up!";
-      localStorage.removeItem("timerEndTime"); // Remove timer end time from localStorage
+      localStorage.removeItem("timerEndTime");
     }
   }, 1000);
 }
 
-// Verifica se há um timer salvo no localStorage e o inicia
 const storedEndTime = localStorage.getItem("timerEndTime");
 
 if (storedEndTime) {
