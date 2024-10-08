@@ -7,7 +7,7 @@ function startCountdown(duration) {
     timerElement.innerHTML = remainingTime;
     remainingTime--;
 
-    if (duration < 0) {
+    if (remainingTime < 0) {
       clearInterval(window.timerInterval);
       timerElement.innerHTML = "Time's up!";
       localStorage.removeItem("timerEndTime");
